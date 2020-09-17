@@ -1,13 +1,139 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.meal .card {
+    border-radius: 4px;
+    overflow: hidden;
+}
+.meal .image-container{
+    overflow: hidden;
+}
+.meal img {
+    height: 220px; 
+    width: 100%; 
+    display: block;
+    object-fit: cover;
+    transition: .3s;
+}
+.meal img:hover {
+    transform: scale(1.04);
+    filter: grayscale(.7);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+
+h4 {
+    letter-spacing: 1px !important;
+    text-transform: none;
+}
+
+.meal-item img {
+    height: 100px;
+    width: 100px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.meal-item .text-success{
+    font-weight: bolder;
+}
+
+button {
+    border-radius: 4px !important;
+    transition: .4s !important;
+}
+button:hover{
+    background: #5787AB !important;
+}
+
+@media screen and (max-width: 768px) {
+    .meal-item img {
+        height: 60px;
+        width: 60px;
+    }
+}
+
+
+.quantity-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.4px solid #ccc;
+    border-radius: 3px;
+    }
+    .quantity-input:focus {
+    background: red;
+    }
+    
+    .quantity-input__modifier,
+    .quantity-input__screen {
+    user-select: none;
+    outline: none;
+    }
+    
+    .quantity-input__modifier {
+    padding: 0.4rem;
+    width: 2rem;
+    font-size: 1rem;
+    background: #f3f3f3;
+    color: #888;
+    border: 0 solid #dbdbdb;
+    text-align: center;
+    cursor: pointer;
+    }
+    .quantity-input__modifier:hover {
+    background: #dadada;
+    color: #555555;
+    }
+    .quantity-input__modifier--left {
+    border-radius: 3px 0 0 3px;
+    font-size: 0.7rem;
+    }
+    .quantity-input__modifier--left:hover{
+        background-color: #ff1122;
+    }
+    .quantity-input__modifier--right {
+    border-radius: 0 3px 3px 0;
+    }
+    
+    .quantity-input__screen {
+    width: 4rem;
+    padding: 0.7rem;
+    font-size: 1.5rem;
+    border: 0;
+    border-top: 0 solid #dbdbdb;
+    border-bottom: 0 solid #dbdbdb;
+    text-align: center;
+    }
+
+
+
+/* Checkout */
+checkout {
+    background: #84a17d; /* fallback for old browsers */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 430px;
+    width: 50%;
+}
+.checkout-form {
+    padding: 20px 20px;
+}
+.checkout-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.checkout-field label {
+    text-align: left;
+    color: #e0eafc;
+    font-size: 10px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+.checkout-field input {
+    background-color: transparent;
+    border: 1px solid #cecece;
+    border-radius: 5px;
+    color: #e0eafc;
+    height: 35px;
 }
